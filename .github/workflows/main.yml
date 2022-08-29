@@ -1,16 +1,21 @@
 name: Build and deploy Hello World application
 
-on:
-  push:
-    branches:
-     - master
-     
+on: workflow_dispatch
+    
 jobs:
-
-  prepare-env:
+  prepare-crazy-tools:
     runs-on: ubuntu-latest
     steps:
       - name: configuring some crazy stuff on Node
         uses: actions/setup-node@v3.4.1
+  
+  check-crazy-variables:
+    runs-on: ubuntu-latest
+    steps:
+     - run: .github/script.sh
+    
+  
+  
+        
       
       
