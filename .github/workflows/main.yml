@@ -1,1 +1,16 @@
 name: Build and deploy Hello World application
+
+on:
+  push:
+    branches:
+     - master
+     
+jobs:
+
+  prepare-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: configuring some crazy stuff on Node
+        uses: actions/setup-node@v3.4.1
+      
+      
