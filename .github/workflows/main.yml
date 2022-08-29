@@ -4,15 +4,8 @@ on:
   push:
     branches:
       - dev
-  pull_request:
     
 jobs:
-  checkout-crazy-code:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        
   prepare-crazy-tools:
     runs-on: ubuntu-latest
     steps:
@@ -22,10 +15,10 @@ jobs:
   check-crazy-variables:
     runs-on: ubuntu-latest
     steps:
-     - run: "${GITHUB_WORKSPACE}/.github/script.sh"
+    - uses: actions/checkout@v3
+    - name: Run script and echo variables
+      run: "./script.sh"
     
   
   
         
-      
-      
