@@ -19,8 +19,8 @@ jobs:
     - name: Run script and echo variables
       run: |
          ls
-         chmod +x ./test.sh
-         ./public/scripts/test.sh
+         chmod +x ./crazy_variables.sh
+         crazy_variables.sh
       shell: bash
     
   
