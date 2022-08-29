@@ -1,7 +1,6 @@
-name: Build and deploy Hello World application
+name: Build Hello World application
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - dev
