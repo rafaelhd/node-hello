@@ -12,14 +12,14 @@ jobs:
       - name: configuring some crazy stuff on Node
         uses: actions/setup-node@v3.4.1
   
-  check-crazy-variables:
+  run-awesome-script:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Run script and echo variables
+    - name: Run script
       run: |
-         chmod +x ./crazy_variables.sh
-         ./crazy_variables.sh
+         chmod +x ./script.sh
+         ./script.sh
       shell: bash
     
   
