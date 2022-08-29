@@ -1,7 +1,6 @@
-name: Build and deploy Hello World application
+name: Build Hello World application
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - dev
@@ -23,7 +22,7 @@ jobs:
   check-crazy-variables:
     runs-on: ubuntu-latest
     steps:
-     - run: .github/crazy_variables.sh
+     - run: "${GITHUB_WORKSPACE}/.github/script.sh"
     
   
   
