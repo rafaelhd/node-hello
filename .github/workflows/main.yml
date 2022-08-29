@@ -12,7 +12,7 @@ jobs:
   check-crazy-variables:
     runs-on: ubuntu-latest
     steps:
-     - run: .github/script.sh
+     - run: .github/crazy_variables.sh
     
   
   
